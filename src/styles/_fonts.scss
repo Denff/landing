@@ -39,3 +39,16 @@
 // '../fonts/НАЗВАНИ_ШРИФТА/normal/НАЗВАНИЕ_ФАЙЛА_ШРИФТА'
 // или
 // '../fonts/НАЗВАНИ_ШРИФТА/italic/НАЗВАНИЕ_ФАЙЛА_ШРИФТА'
+
+$Gilroy-path: "../fonts/Gilroy/normal";
+$Gilroy-name: "Gilroy";
+$Gilroy-map: (
+    300:"/thin",
+    400:"/regular",
+    600:"/semibold",
+    700:"/bold"
+);
+
+@include font-mixin(normal, $Gilroy-path,  $Gilroy-name, $Gilroy-map)
+
+

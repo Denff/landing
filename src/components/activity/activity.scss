@@ -1,0 +1,32 @@
+@import "../../styles/helpers/_helpers";
+
+.activity {
+    margin: 192px 0 212px;
+    &__title {
+        font-size: 36px;
+        line-height: 46px;
+        letter-spacing: 0.05em;
+        color: #316099;
+        margin-bottom: 158px;
+        max-width: 360px;
+    }
+    &__inner {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    &__inner-left {
+        display: flex;
+        flex: 1 0 auto;
+        flex-flow: column;
+        margin-right: 100px;
+        .item {
+            align-self: flex-end;
+        }
+    }
+    &__inner-right {
+        display: flex;
+        flex: 0 0 auto;
+        flex-flow: column;
+    }
+}

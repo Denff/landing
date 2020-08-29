@@ -8,14 +8,14 @@ body, div, table, tr, td, h1, h2, h3, li {
     position: relative;
 }
 body {
-    font-family: $font;
+    font-family: $Gilroy;
     font-size: map-get($fontSize, norma);
     font-weight: 400;
-    color: #4d4d4d;
+    color: #1f3f68;
     line-height: 22px;
     min-width: 970px;
     margin: 0;
-}
+} 
 blockquote, q {
     quotes: none;
 }
@@ -30,10 +30,11 @@ hr {
     background-color: #ededee;
 }
 a {
-    color: #0072bb;
+    color: #5a98d0;
     text-decoration: none;
     border-bottom: 1px solid #cce3f1;
     outline: none;
+    transition: all 0.3s;
     &:hover {
         color: #009ee2;
         text-decoration: none;
@@ -70,7 +71,7 @@ ul {
     margin: map-get($margin, ul);
     li {
         list-style: none;
-        &:before {
+        &::before {
             content: "\2022";
             position: absolute;
             top: 0;

@@ -1,0 +1,53 @@
+@import "../../styles/helpers/_helpers";
+
+.belovedClient {
+    padding: 95px 0 125px;
+    color: #ffffff;
+    background: #5a98d0;
+    border-radius: 200px 0 0 0;
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        background: transparent;
+        &:hover {
+            color: #ffffff;
+            text-decoration: none;
+            border-color: #ffffff;
+            // background: #1F3F68;
+            background: rgba(31, 63, 104, 0.2);
+
+        }
+        &:focus {
+            text-decoration: none;
+            outline: none;
+            border-color: #ffffff;
+        }
+    }
+    &__inner {
+        margin-bottom: 110px;
+    }
+    &__inner-clients {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    &__item {
+        flex: 1 1 25%;
+        border: 1px solid #ffffff;
+        padding: 40px 10px;
+        text-align: center;
+        border-bottom: none;
+        border-right: none;
+        @include all-but(8) {
+            text-transform: uppercase;
+        }
+        @include first(4) {
+            border-top: none;
+        }
+        @include first-child() {
+            border-left: none;
+        }
+        @include each(5) {
+            border-left: none;
+        }
+    }
+}

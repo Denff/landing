@@ -86,23 +86,41 @@ button {
 // РАСПОЛОЖЕНИЕ ИКОНКИ В КНОПКЕ (СЛЕВА ИЛИ СПРАВА)
 .btn_icon-left {
     padding-left: 54px;
-    &:before {
+    &::before {
+        display: flex;
+        align-items: center;
         position: absolute;
         top: 1px;
         bottom: 0;
         left: 18px;
-        display: flex;
-        align-items: center;
     }
 }
 .btn_icon-right {
     padding-right: 54px;
-    &:before {
-        position: absolute;
-        top: 1px;
-        bottom: 0;
-        right: 18px;
+    &::before {
         display: flex;
         align-items: center;
+        position: absolute;
+        top: 1px;
+        right: 18px;
+        bottom: 0;
     }
+}
+.btn_style-1 {
+    width: 220px;
+    background: #5a98d0;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    border-radius: 10px;
+    font-family: $Gilroy;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    padding: 14px 20px 15px;
+    color: #ffffff;
+}
+a.btn_style-1 {
+    text-decoration: none;
+    border-color: transparent;
 }
