@@ -1,20 +1,20 @@
-(function($) {
-    if (typeof Drupal !== 'undefined') {
-        Drupal.behaviors.customThemeFile = {
-            attach: function(context, settings) {
-                init();
-            }
-        };
-    } else {
-        init();
-    }
+// (function($) {
+//     if (typeof Drupal !== 'undefined') {
+//         Drupal.behaviors.customThemeFile = {
+//             attach: function(context, settings) {
+//                 init();
+//             }
+//         };
+//     } else {
+//         init();
+//     }
 
-    function init() {
-        // Ваш код
-    }
+//     function init() {
+//     }
 
-    $(document).ready(function(){
-        $('table').wrap('<div class="table-wrapper"></div>');
-    });
+//     $(document).ready(function(){
+//         $('table').wrap('<div class="table-wrapper"></div>');
+//     });
 
-})(jQuery);
+// })(jQuery);
+

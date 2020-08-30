@@ -1,0 +1,26 @@
+@import "../../styles/helpers/_helpers";
+
+.form {
+    width: 510px;
+    height: 670px;
+    &__title {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 32px;
+    }
+    &__fields {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+    }
+    &__field {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        margin-bottom: 32px;
+    }
+
+}

@@ -21,6 +21,9 @@ block styles
     +style('css/belovedClient.min.css')
     +style('css/letsTalk.min.css')
     +style('css/footer.min.css')
+    +style('css/modal.min.css')
+    +style('css/form.min.css')
+    +style('css/form-1.min.css')
 
 block scripts
     //- +script('https://cdn.jsdelivr.net/npm/jquery@1.11.0/dist/jquery.min.js')
@@ -31,6 +34,8 @@ block scripts
     //- +script('https://cdn.jsdelivr.net/npm/lightgallery/dist/js/lightgallery-all.min.js')
     //- +script('https://cdn.jsdelivr.net/npm/inputmask/dist/min/jquery.inputmask.bundle.min.js')
     //- +script('js/lightgallery.js')       // фотогаллерея
+    +script('js/form.min.js')
+    +script('js/modal.min.js') 
     +script('js/theme.min.js')          // кастомный файл
 
 block content
@@ -43,3 +48,4 @@ block content
         include ../components/belovedClient/belovedClient
         include ../components/letsTalk/letsTalk
     include ../components/footer/footer
+    include ../components/modal/modal

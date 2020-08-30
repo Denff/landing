@@ -1,0 +1,17 @@
+// form-1
++b.form.form-1
+    +e.title Send us message    
+    +e.FORM.contact
+        +e.fields
+            +e.field
+                LABEL Full name
+                INPUT(type="text" placeholder="Your name"  data-rule="text" name="name" required)
+            +e.field
+                LABEL Email
+                INPUT(type="text" placeholder="Your Email" data-rule="email" name="email" required)
+            +e.field
+                LABEL Message
+                TEXTAREA(type="text" placeholder="Message" name="message")
+        +e.action
+            BUTTON(type="submit").btn.btn_style-1 Submit
+// КОНЕЦ: form-1
