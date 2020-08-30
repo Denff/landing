@@ -2,13 +2,10 @@
     "name": "gulp",
     "description": "",
     "version": "1.0.0",
+    "homepage": "https://denff.github.io/landing/dist",
     "author": {
-        "name": "Pridannikov Mikhail",
-        "url": "https://github.com/mihail-174"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/mihail-174/gulp-new.git"
+        "name": "Frolov Denis",
+        "url": "https://github.com/Denff"
     },
     "license": "MIT",
     "scripts": {
