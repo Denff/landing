@@ -13,7 +13,7 @@
     margin: 0 0 100px 0;
     padding: 48px;
     &__icon {
-        margin-bottom: 50px;
+        margin-bottom: 55px;
         align-self: center;
     }
     &__icon_pos1 {
@@ -22,6 +22,7 @@
     &__icon_pos2 {
         margin-top: -71px;
         margin-left: 8px;
+        margin-bottom: 50px;
     }
     &__icon_pos3 {
         margin-right: 40px;
@@ -29,13 +30,10 @@
     &__name {
         font-size: 20px;
         line-height: 30px;
-        letter-spacing: 0.05em;
         margin-bottom: 16px;
+        letter-spacing: 0.055em;
     }
     &__short-info {
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.05em;
         opacity: 0.6;
         max-height: 284px;
         overflow: hidden;
@@ -44,6 +42,16 @@
     &__link {
         font-size: 14px;
         line-height: 30px;
-        letter-spacing: 0.05em;
+        border-color: transparent;
+        position: relative;
+        width: 124px;
+        &::before {
+            @include svgsprite(arrow_right);
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate3d(0, -50%, 0);
+        }
     }
 }

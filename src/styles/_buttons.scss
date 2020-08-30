@@ -6,12 +6,13 @@ button {
 }
 
 .btn {
+    display: inline-block;
+    position: relative;
     cursor: pointer;
     text-align: center;
     font-weight: 600;
-    display: inline-block;
     padding: 6px 14px 7px;
-    position: relative;
+    letter-spacing: 0;
 }
 .btn_default {
     border-width: 1px;
@@ -113,14 +114,18 @@ button {
     border-radius: 10px;
     font-family: $Gilroy;
     font-weight: 300;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 26px;
     text-align: center;
-    letter-spacing: 0.04em;
     padding: 14px 20px 15px;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 1);
 }
+
 a.btn_style-1 {
     text-decoration: none;
     border-color: transparent;
+    color: rgba(255, 255, 255, 1);
+    &:hover {
+        color: rgba(255, 255, 255, 0.6);
+    }
 }

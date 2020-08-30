@@ -3,19 +3,24 @@
 .activity {
     margin: 192px 0 212px;
     &__title {
-        font-size: 36px;
-        line-height: 46px;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.027em;
         color: #316099;
         margin-bottom: 158px;
         max-width: 360px;
     }
     &__inner {
+
+        @include max-screen(991px) {
+            flex-flow: column nowrap;
+        }
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
     }
     &__inner-left {
+        @include max-screen(991px) {
+            margin-right: 0;
+        }
         display: flex;
         flex: 1 0 auto;
         flex-flow: column;
@@ -25,8 +30,17 @@
         }
     }
     &__inner-right {
+        @include max-screen(991px) {
+            flex: 1 0 auto;
+        }
         display: flex;
         flex: 0 0 auto;
         flex-flow: column;
+        .item {
+            @include last-child() {
+                align-self: flex-end;
+                margin: 0;
+            }
+        }
     }
 }

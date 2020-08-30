@@ -8,11 +8,12 @@ body, div, table, tr, td, h1, h2, h3, li {
     position: relative;
 }
 body {
-    font-family: $Gilroy;
+    font-family: $Gilroy, Arial, sans-serif;
     font-size: map-get($fontSize, norma);
+    letter-spacing: map-get($letter-spacing, norma);
+    line-height: map-get($lineHeight, norma);
     font-weight: 400;
     color: #1f3f68;
-    line-height: 22px;
     min-width: 970px;
     margin: 0;
 } 
@@ -53,16 +54,19 @@ h1 {
     font-size: map-get($fontSize, h1);
     margin: map-get($margin, h1);
     line-height: map-get($lineHeight, h1);
+    letter-spacing: 0.027em;
 }
 h2 {
     font-size: map-get($fontSize, h2);
     margin: map-get($margin, h2);
     line-height: map-get($lineHeight, h2);
+    letter-spacing: 0.027em;
 }
 h3 {
     font-size: map-get($fontSize, h3);
     margin: map-get($margin, h3);
     line-height: map-get($lineHeight, h3);
+    letter-spacing: 0.027em;
 }
 p {
     margin: map-get($margin, p);

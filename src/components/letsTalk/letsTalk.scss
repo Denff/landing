@@ -2,10 +2,13 @@
 
 .letsTalk {
     position: relative;
-    padding: 90px 0 95px;
+    padding: 90px 0 99px;
     background: #5a98d0;
     color: #ffffff;
     &::before {
+        @include max-screen(1199px) {
+            border-radius: 0 150px 0 0;
+        }
         content: "";
         position: absolute;
         z-index: 1;
@@ -17,18 +20,34 @@
         border-radius: 0 200px 0 0;
     }
     &__inner {
+        @include max-screen(991px) {
+            flex-flow: column;
+            max-width: 100%;
+        }
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         z-index: 2;
+        width: auto;
+        max-width: 860px;
         .btn {
+            @include max-screen(991px) {
+                align-self: flex-start;
+                margin: 0 0 40px;
+            }
             align-self: center;
         }
     }
+    &__inner-info {
+        @include max-screen(991px) {
+            margin: 0 0 40px;
+        }
+        
+    }
     &__title {
-        max-width: 330px;
+        width: 330px;
     }
     &__short-info {
-        max-width: 460px;
+        width: 460px;
     }
 }

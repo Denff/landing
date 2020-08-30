@@ -1,9 +1,10 @@
 // header
 +b.header
-    +e.inner.container
-        +e.logo
-            A(href="/")
-                IMG(src="../img/logo.svg")
-        +e.menu
-        include ../menu/menu
+    .container
+        +e.inner
+            +e.logo
+                A(href="/").logo
+                    IMG(src="../img/logo.svg")
+            +e.menu
+            include ../menu/menu
 // КОНЕЦ: header
