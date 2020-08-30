@@ -15,9 +15,8 @@
             @include svgsprite(burger);
             content: "";
             position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translate3d( 0 -50%, 0);
+            top: 0;
+            left: -3px;
         }
     }
 }

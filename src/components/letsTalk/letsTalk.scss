@@ -44,9 +44,13 @@
         }
     }
     &__title {
-        width: 330px;
+        max-width: 330px;
     }
     &__short-info {
-        width: 460px;
+        color: rgba( 255, 255, 255, 0.6);
+        @include max-screen(767px) {
+            padding-right: 30px;
+        }
+        max-width: 460px;
     }
 }

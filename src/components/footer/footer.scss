@@ -46,15 +46,22 @@
     &__inner-2 {
         display: flex;
         flex-flow: row nowrap;
+        @include max-screen(460px) {
+            flex-flow: column;
+        }
         .footer__list {
             @include max-screen(991px) {
-                width: 200px;
+                width: auto;
+                margin-right: 50px;
+            }
+            @include max-screen(460px) {
+                margin-right: 0;
             }
             @include last-child() {
                 margin-right: 0;
             }
             margin-right: 75px;
-            width: 230px;
+            width: 175px;
         }
     }
     &__inner_bottom {
@@ -73,6 +80,7 @@
         display: flex;
         flex-flow: column nowrap;
         margin-right: 100px;
+        flex: 0 0 auto;
         width: 300px;
     }
     &__item {

@@ -1,6 +1,11 @@
 @import "../../styles/helpers/_helpers";
 
 .item {
+
+    @include max-screen(576px) {
+        width: 100%;
+        padding: 20px 20px 40px 20px;
+    }
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
@@ -34,6 +39,10 @@
         letter-spacing: 0.055em;
     }
     &__short-info {
+        @include max-screen(576px) {
+            flex: 1 0 auto;
+            margin-bottom: 12px;
+        }
         opacity: 0.6;
         max-height: 284px;
         overflow: hidden;
