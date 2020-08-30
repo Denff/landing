@@ -1,0 +1,1 @@
+{"version":3,"sources":["menu/menu.scss"],"names":[],"mappings":"AAEA,MACI,QAAA,GACA,SAAA,SACA,IAAA,EACA,MAAA","file":"../menu.min.css","sourcesContent":["@import \"../../styles/helpers/_helpers\";\n\n.menu {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    right: -100%;\n}\n"]}
