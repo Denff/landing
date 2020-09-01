@@ -8,6 +8,7 @@
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="css/styles.min.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -110,7 +111,7 @@
               <div class="letsTalk__short-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
               </div>
             </div>
-            <A href="javascript://" data-path="contact" class="btn btn_style-1">Let’s Talk</A>
+            <A href="javascript://" data-path="contact" class="btn btn_style-1 callModal-1">Let’s Talk</A>
           </div>
         </div>
       </div>
@@ -191,15 +192,18 @@
               <div class="form__fields">
                 <div class="form__field">
                   <LABEL>Full name</LABEL>
-                  <INPUT type="text" placeholder="Your name" data-rule="text" name="name" required></INPUT>
+                  <INPUT type="text" placeholder="Your name" name="name"></INPUT>
+                  <DIV class="errors"></DIV>
                 </div>
                 <div class="form__field">
                   <LABEL>Email</LABEL>
-                  <INPUT type="text" placeholder="Your Email" data-rule="email" name="email" required></INPUT>
+                  <INPUT type="text" placeholder="Your Email" name="email"></INPUT>
+                  <DIV class="errors"></DIV>
                 </div>
                 <div class="form__field">
                   <LABEL>Message</LABEL>
                   <TEXTAREA type="text" placeholder="Message" name="message"></TEXTAREA>
+                  <DIV class="errors"></DIV>
                 </div>
               </div>
               <div class="form__action">
@@ -212,21 +216,6 @@
       </div>
     </div>
     <!-- КОНЕЦ: modal-->
-    <link rel="stylesheet" href="css/common.min.css"/>
-    <link rel="stylesheet" href="css/lightgallery.css"/>
-    <link rel="stylesheet" href="css/header.min.css"/>
-    <link rel="stylesheet" href="css/menu.min.css"/>
-    <link rel="stylesheet" href="css/newTool.min.css"/>
-    <link rel="stylesheet" href="css/activity.min.css"/>
-    <link rel="stylesheet" href="css/item.min.css"/>
-    <link rel="stylesheet" href="css/belovedClient.min.css"/>
-    <link rel="stylesheet" href="css/letsTalk.min.css"/>
-    <link rel="stylesheet" href="css/footer.min.css"/>
-    <link rel="stylesheet" href="css/modal.min.css"/>
-    <link rel="stylesheet" href="css/form.min.css"/>
-    <link rel="stylesheet" href="css/form-1.min.css"/>
-    <script src="js/form.min.js"></script>
-    <script src="js/modal.min.js"></script>
-    <script src="js/theme.min.js"></script>
+    <script src="js/theme.js"></script>
   </body>
 </html>
