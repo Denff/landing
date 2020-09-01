@@ -1,6 +1,3 @@
-/*
-* JAVASCRIPT HELPERS
-*/
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
@@ -108,23 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// проставляем title у ссылок изображений
-// инициализируем (подключаем) либу фотогалереи
-(function($){
-    window.lightGallery = function(block, a) {
-        $(block).find(a).each(function() {
-            $(this).attr('data-sub-html', $(this).find('img').attr('title'));
-        });
-        $(block).lightGallery({
-            selector: a,
-            download: false,
-            fullScreen: false,
-            zoom: false,
-            share: false,
-            thumbnail: true
-        });
-    }
-})(jQuery);
+
 
 const callModalbtn = document.querySelector('.callModal-1');
 const overlay = document.querySelector('.overlay');
@@ -177,23 +158,5 @@ modalClose.addEventListener('click', (e) => {
     overlay.classList.remove('overlay-visible');
 
 });
-// (function($) {
-//     if (typeof Drupal !== 'undefined') {
-//         Drupal.behaviors.customThemeFile = {
-//             attach: function(context, settings) {
-//                 init();
-//             }
-//         };
-//     } else {
-//         init();
-//     }
 
-//     function init() {
-//     }
-
-//     $(document).ready(function(){
-//         $('table').wrap('<div class="table-wrapper"></div>');
-//     });
-
-// })(jQuery);
 

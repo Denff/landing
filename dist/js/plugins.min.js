@@ -1,3 +1,0 @@
-/*
-* JAVASCRIPT HELPERS
-*/
