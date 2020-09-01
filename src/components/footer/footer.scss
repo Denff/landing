@@ -32,6 +32,9 @@
         width: 860px;
         padding: 95px 0 0;
         &::before {
+            @include max-screen(991px) {
+                right: 15%;
+            }
             content: "";
             position: absolute;
             opacity: 0.4;

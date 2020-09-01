@@ -1,20 +1,36 @@
-const btns = document.querySelectorAll('.btn');
+const callModalbtn = document.querySelector('.callModal-1');
 const overlay = document.querySelector('.overlay');
 const modal = document.querySelectorAll('.modal');
 const modalClose = document.querySelector('.modal__close');
 
-btns.forEach((el) => {
-    el.addEventListener('click', (e) => {
-        let path = e.currentTarget.getAttribute('data-path');
-        console.log(path);
+callModalbtn.addEventListener('click', (e) => {
+    
+    let path = e.currentTarget.getAttribute('data-path');
+    console.log(path);
 
-        modal.forEach((e) => {
-            e.classList.remove('modal-opened');
-        });
-        document.querySelector(`[data-target="${path}"]`).classList.add('modal-opened');
-        overlay.classList.add('overlay-visible');
+    modal.forEach((e) => {
+        e.classList.remove('modal-opened');
     });
+
+    let modalWindow = document.querySelector(`[data-target="${path}"]`);
+    let opacity = 0.4;
+
+    modalWindow.classList.add('modal-opened');
+
+    let timer = setInterval(function () {
+        if (opacity >= 1) {
+            clearInterval(timer);
+        }
+        modalWindow.style.opacity = opacity;
+        modalWindow.style.filter = 'alpha(opacity=' + opacity * 100 + ")";
+        opacity += opacity * 0.1;
+    }, 10);
+
+
+
+    overlay.classList.add('overlay-visible');
 });
+
 
 overlay.addEventListener('click', (e) => {
 
@@ -26,8 +42,7 @@ overlay.addEventListener('click', (e) => {
     }
 });
 modalClose.addEventListener('click', (e) => {
-    // let modalClass = e.currentTarget.getAttribute('data-modalClass');
-    // document.querySelector(modalClass).classList.remove('modal-opened');
+
     modal.forEach((e) => {
         e.classList.remove('modal-opened');
     });

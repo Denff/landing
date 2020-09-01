@@ -1,8 +1,15 @@
 @import "../../styles/helpers/_helpers";
 
 .form {
+    @include max-screen(576px) {
+        width: auto;
+        max-width: 510px;
+        min-width: 300px;
+        padding: 24px;
+    }
     width: 510px;
     height: 670px;
+    padding: 56px;
     &__title {
         font-size: 20px;
         line-height: 30px;
@@ -21,6 +28,14 @@
         flex-flow: column nowrap;
         justify-content: flex-start;
         margin-bottom: 32px;
+        position: relative;
     }
+}
 
+.errors {
+    color: red;
+    position: absolute;
+    content: "";
+    bottom: -22px;
+    left: 0;
 }

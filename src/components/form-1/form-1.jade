@@ -5,13 +5,16 @@
         +e.fields
             +e.field
                 LABEL Full name
-                INPUT(type="text" placeholder="Your name"  data-rule="text" name="name" required)
+                INPUT(type="text" placeholder="Your name"  name="name")
+                DIV.errors
             +e.field
                 LABEL Email
-                INPUT(type="text" placeholder="Your Email" data-rule="email" name="email" required)
+                INPUT(type="text" placeholder="Your Email" name="email")
+                DIV.errors
             +e.field
                 LABEL Message
                 TEXTAREA(type="text" placeholder="Message" name="message")
+                DIV.errors
         +e.action
             BUTTON(type="submit").btn.btn_style-1 Submit
 // КОНЕЦ: form-1

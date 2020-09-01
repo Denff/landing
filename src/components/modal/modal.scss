@@ -1,10 +1,18 @@
 @import "../../styles/helpers/_helpers";
 
 .modal {
+
+    @include max-screen(576px) {
+        width: auto;
+        max-width: 510px;
+        min-width: 300px;
+        height: 670px;
+    }
+
     position: relative;
     display: none;
-    width: 540px;
-    height: 700px;
+    width: 510px;
+    height: 670px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -13,7 +21,7 @@
     background: #ffffff;
     box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
     border-radius: 10px;
-    padding: 15px;
+    transition: 0.3s;
 
     &__close {
         content: "";
@@ -63,6 +71,7 @@
     opacity: 0;
     visibility: hidden;
     z-index: 20;
+    transition: 0.3s;
 }
 .overlay-visible {
     opacity: 1;
