@@ -30,6 +30,16 @@
         margin-bottom: 32px;
         position: relative;
     }
+
+    &__field.success input {
+        border-color: #2ecc71;
+    }
+
+
+    &__field.error input {
+        border-color: #e74c3c;
+    }
+
 }
 
 .errors {

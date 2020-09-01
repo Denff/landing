@@ -51,12 +51,18 @@ a {
     }
 }
 h1 {
+    @include max-screen(576px) {
+        font-size: 32px;
+    }
     font-size: map-get($fontSize, h1);
     margin: map-get($margin, h1);
     line-height: map-get($lineHeight, h1);
     letter-spacing: 0.027em;
 }
 h2 {
+    @include max-screen(576px) {
+        font-size: 30px;
+    }
     font-size: map-get($fontSize, h2);
     margin: map-get($margin, h2);
     line-height: map-get($lineHeight, h2);

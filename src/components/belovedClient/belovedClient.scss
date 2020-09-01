@@ -16,6 +16,9 @@
         justify-content: flex-start;
     }
     &__title {
+        @include max-screen(767px) {
+            max-width: 100%;
+        }
         max-width: 240px;
         margin-right: 80px;
     }

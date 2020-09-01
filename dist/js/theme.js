@@ -1,116 +1,107 @@
+/*
+* JAVASCRIPT HELPERS
+*/
+
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
-    const contactForm = document.querySelector('.form__contact');
-
-    let isValidate = false;
-  
-    const regExpName = /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']{3,16}?$/;
-    const regExpEmail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
-    // const regExpMessage = /^[a-z0-9_-]{10,255}$/;
+    const form = document.getElementById('form');
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
 
 
-    const submit = () => {
+    const isValidate = false;
 
-        let contactFormData = {
-            name: document.querySelector('input[name="name"]').value,
-            email: document.querySelector('input[name="email"]').value,
-            message: document.querySelector('textarea[name="message"]').value
-        };
-
-        const request = new XMLHttpRequest();
-
-        // request.addEventListener('load', () => {
-        // });
-
-        request.addEventListener("readystatechange", () => {
-            if (request.readyState === 4 && request.status === 200) {
-                console.log(request.responseText);
-                alert('отправлено!!!');
-            }
-        });
-
-        request.open('POST', '/mail.php', true);
-        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-        request.send('name=' + encodeURIComponent(contactFormData.name)
-            + '&email=' + encodeURIComponent(contactFormData.email)
-            + '&message=' + encodeURIComponent(contactFormData.message));
-
-        for ( let elem of contactFrom.elements){
-            if(elem.tagName === 'INPUT'){
-                elem.value = "";
-            }
-        }
-    }
-
-    const validateElem = (elem) => {
-
-        let errorDiv = elem.nextElementSibling;
-        let errText = "Некорректный ввод символов!"
-
-        if (elem.name == 'name') {
-            if (!regExpName.test(elem.value) && elem.value !== '') {
-                errorDiv.textContent = errText;
-                isValidate = false;
-            } else {
-                errorDiv.textContent = "";
-                isValidate = true;
-            }
-        }
-        if (elem.name == 'email') {
-            if (!regExpEmail.test(elem.value) && elem.value !== '') {
-                errorDiv.textContent = errText;
-                isValidate = false;
-            } else {
-                errorDiv.textContent = "";
-                isValidate = true;
-            }
-        }
-        // if (elem.name == 'message') {
-        //     if (!regExpMessage.test(elem.value) && elem.value !== '') {
-        //         errorDiv.textContent = errText;
-        //         isValidate = false;
-        //     } else {
-        //         errorDiv.textContent = "";
-        //         isValidate = true;
-        //     }
-        // }
-    };
-
-    for (let elem of contactForm.elements) {
-        if (elem.tagName === 'INPUT') {
-            elem.addEventListener('mouseout', () => {
-                validateElem(elem);
-            });
-        }
-    }
-
-    contactForm.addEventListener('submit', (e) => {
+    form.addEventListener('submit', (e) => {
         e.preventDefault();
-
-        for (let elem of contactForm.elements) {
-
-            if (elem.tagName === 'INPUT') {
-                if (elem.value == "") {
-                    elem.nextElementSibling.textContent = "Данное поле не заполнено!";
-                    isValidate = false;
-                } else {
-                    elem.nextElementSibling.textContent = "";
-                    isValidate = true;
-                }
+        for (let elem of form.elements) {
+            if (elem.classList.contains('success').length > 1) {
+                alert('yes');
             }
         }
-        if (isValidate) submit();
+        checkInputs();
+
     });
+
+    function checkInputs() {
+
+        let nameValue = name.value.trim();
+        let emailValue = email.value.trim();
+        
+        if (nameValue === '') {
+            setErrorFor(name, 'Username cannot be blank');
+
+        } else if (!isName(emailValue)) {
+            setErrorFor(name, 'Not a valid name');
+        } else {
+            setSuccessFor(name);
+
+        }
+        if (emailValue === '') {
+            setErrorFor(email, 'Email cannot be blank');
+
+        } else if (!isEmail(emailValue)) {
+            setErrorFor(email, 'Not a valid email');
+
+        } else {
+            setSuccessFor(email);
+
+        }
+    }
+
+
+
+    function setErrorFor(input, message) {
+        const inputBox = input.parentElement;
+        const errorMessage = inputBox.querySelector('.errors');
+        inputBox.className = 'form__field error';
+        errorMessage.textContent = message;
+
+    }
+
+    function setSuccessFor(input) {
+        const inputBox = input.parentElement;
+        const errorMessage = inputBox.querySelector('.errors');
+        inputBox.className = 'form__field success';
+        errorMessage.textContent = "";
+
+    }
+
+
+    function isName(name) {
+        let regExpName = /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-']+[a-zA-Zа-яА-Я']{3,16}?/; 
+        return regExpName.test(name);
+    }
+
+    function isEmail(email) {
+        let regExpEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+        return regExpEmail.test(email);
+    }
+
+
 });
-
-
-
+// проставляем title у ссылок изображений
+// инициализируем (подключаем) либу фотогалереи
+(function($){
+    window.lightGallery = function(block, a) {
+        $(block).find(a).each(function() {
+            $(this).attr('data-sub-html', $(this).find('img').attr('title'));
+        });
+        $(block).lightGallery({
+            selector: a,
+            download: false,
+            fullScreen: false,
+            zoom: false,
+            share: false,
+            thumbnail: true
+        });
+    }
+})(jQuery);
 
 const callModalbtn = document.querySelector('.callModal-1');
 const overlay = document.querySelector('.overlay');
 const modal = document.querySelectorAll('.modal');
-const modalClose = document.querySelector('.modal__close');
+const modalClose = document.querySelectorAll('.modal__close');
 
 callModalbtn.addEventListener('click', (e) => {
     
@@ -135,8 +126,6 @@ callModalbtn.addEventListener('click', (e) => {
         opacity += opacity * 0.1;
     }, 10);
 
-
-
     overlay.classList.add('overlay-visible');
 });
 
@@ -150,13 +139,16 @@ overlay.addEventListener('click', (e) => {
         overlay.classList.remove('overlay-visible');
     }
 });
-modalClose.addEventListener('click', (e) => {
 
-    modal.forEach((e) => {
-        e.classList.remove('modal-opened');
+modalClose.forEach((e) => {
+    e.addEventListener('click', () => {
+
+        modal.forEach((ev) => {
+            ev.classList.remove('modal-opened');
+        });
+        overlay.classList.remove('overlay-visible');
+
     });
-    overlay.classList.remove('overlay-visible');
-
 });
 
 

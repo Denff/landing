@@ -1,7 +1,7 @@
 const callModalbtn = document.querySelector('.callModal-1');
 const overlay = document.querySelector('.overlay');
 const modal = document.querySelectorAll('.modal');
-const modalClose = document.querySelector('.modal__close');
+const modalClose = document.querySelectorAll('.modal__close');
 
 callModalbtn.addEventListener('click', (e) => {
     
@@ -26,8 +26,6 @@ callModalbtn.addEventListener('click', (e) => {
         opacity += opacity * 0.1;
     }, 10);
 
-
-
     overlay.classList.add('overlay-visible');
 });
 
@@ -41,11 +39,15 @@ overlay.addEventListener('click', (e) => {
         overlay.classList.remove('overlay-visible');
     }
 });
-modalClose.addEventListener('click', (e) => {
 
-    modal.forEach((e) => {
-        e.classList.remove('modal-opened');
+modalClose.forEach((e) => {
+    e.addEventListener('click', () => {
+
+        modal.forEach((ev) => {
+            ev.classList.remove('modal-opened');
+        });
+        overlay.classList.remove('overlay-visible');
+
     });
-    overlay.classList.remove('overlay-visible');
-
 });
+

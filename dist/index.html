@@ -188,16 +188,16 @@
           <div class="form form-1">
             <div class="form__title">Send us message    
             </div>
-            <form class="form__contact">
+            <form id="form" class="form__contact">
               <div class="form__fields">
                 <div class="form__field">
                   <LABEL>Full name</LABEL>
-                  <INPUT type="text" placeholder="Your name" name="name"></INPUT>
+                  <INPUT id="name" type="text" placeholder="Your name" name="name"></INPUT>
                   <DIV class="errors"></DIV>
                 </div>
                 <div class="form__field">
                   <LABEL>Email</LABEL>
-                  <INPUT type="text" placeholder="Your Email" name="email"></INPUT>
+                  <INPUT id="email" type="text" placeholder="Your Email" name="email"></INPUT>
                   <DIV class="errors"></DIV>
                 </div>
                 <div class="form__field">
@@ -207,7 +207,7 @@
                 </div>
               </div>
               <div class="form__action">
-                <BUTTON type="submit" class="btn btn_style-1">Submit</BUTTON>
+                <BUTTON id="buttn" type="submit" class="btn btn-submit btn_style-1">Submit</BUTTON>
               </div>
             </form>
           </div>
@@ -216,6 +216,17 @@
       </div>
     </div>
     <!-- КОНЕЦ: modal-->
+    <!-- modal-2-->
+    <div class="overlay">
+      <div data-target="contact" class="modal modal-2">
+        <div class="modal__content">сообщение успешно отправлено!
+        </div><a href="javascript://" data-modalClass="modal-1" class="modal__close"></a>
+      </div>
+    </div>
+    <!-- КОНЕЦ: modal-2-->
+
+
+
     <script src="js/theme.js"></script>
   </body>
 </html>

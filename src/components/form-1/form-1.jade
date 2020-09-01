@@ -1,20 +1,20 @@
 // form-1
 +b.form.form-1
     +e.title Send us message    
-    +e.FORM.contact
+    +e.FORM#form.contact
         +e.fields
             +e.field
                 LABEL Full name
-                INPUT(type="text" placeholder="Your name"  name="name")
+                INPUT#name(type="text" placeholder="Your name"  name="name")
                 DIV.errors
             +e.field
                 LABEL Email
-                INPUT(type="text" placeholder="Your Email" name="email")
+                INPUT#email(type="text" placeholder="Your Email" name="email")
                 DIV.errors
             +e.field
                 LABEL Message
                 TEXTAREA(type="text" placeholder="Message" name="message")
                 DIV.errors
         +e.action
-            BUTTON(type="submit").btn.btn_style-1 Submit
+            BUTTON#buttn(type="submit").btn.btn-submit.btn_style-1 Submit
 // КОНЕЦ: form-1
