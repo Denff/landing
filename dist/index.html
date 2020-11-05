@@ -8,7 +8,6 @@
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/vnd.microsoft.icon">
-    <link rel="stylesheet" href="css/styles.min.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -116,6 +115,31 @@
         </div>
       </div>
       <!-- КОНЕЦ: letsTalk-->
+      <!-- form-1-->
+      <div class="form form-1">
+        <div class="form__title">Send us message    
+        </div>
+        <form id="form" action="#" class="form__contact">
+          <div class="form__fields">
+            <div class="form__field">
+              <label>Full name</label>
+              <input type="text" placeholder="Your name" name="name" class="required-field">
+            </div>
+            <div class="form__field">
+              <label>Email</label>
+              <input type="text" placeholder="Your Email" name="email" class="required-field email">
+            </div>
+            <div class="form__field">
+              <label>Message</label>
+              <textarea type="text" placeholder="Message" name="message"></textarea>
+            </div>
+          </div>
+          <div class="form__action">
+            <button type="submit" class="btn btn-submit btn_style-1">Submit</button>
+          </div>
+        </form>
+      </div>
+      <!-- КОНЕЦ: form-1-->
     </div>
     <!-- footer-->
     <div class="footer">
@@ -188,26 +212,23 @@
           <div class="form form-1">
             <div class="form__title">Send us message    
             </div>
-            <form class="form__contact">
+            <form id="form" action="#" class="form__contact">
               <div class="form__fields">
                 <div class="form__field">
-                  <LABEL>Full name</LABEL>
-                  <INPUT type="text" placeholder="Your name" name="name"></INPUT>
-                  <DIV class="errors"></DIV>
+                  <label>Full name</label>
+                  <input type="text" placeholder="Your name" name="name" class="required-field">
                 </div>
                 <div class="form__field">
-                  <LABEL>Email</LABEL>
-                  <INPUT type="text" placeholder="Your Email" name="email"></INPUT>
-                  <DIV class="errors"></DIV>
+                  <label>Email</label>
+                  <input type="text" placeholder="Your Email" name="email" class="required-field email">
                 </div>
                 <div class="form__field">
-                  <LABEL>Message</LABEL>
-                  <TEXTAREA type="text" placeholder="Message" name="message"></TEXTAREA>
-                  <DIV class="errors"></DIV>
+                  <label>Message</label>
+                  <textarea type="text" placeholder="Message" name="message"></textarea>
                 </div>
               </div>
               <div class="form__action">
-                <BUTTON type="submit" class="btn btn-submit btn_style-1">Submit</BUTTON>
+                <button type="submit" class="btn btn-submit btn_style-1">Submit</button>
               </div>
             </form>
           </div>
@@ -215,16 +236,20 @@
         </div><a href="javascript://" data-modalClass="modal-1" class="modal__close"></a>
       </div>
       <!-- КОНЕЦ: modal-->
-      <!-- modal-2-->
-      <div class="modal modal-2">
-        <div class="modal__content">сообщение успешно отправлено!
-        </div><a href="javascript://" class="modal__close"></a>
-      </div>
-      <!-- КОНЕЦ: modal-2-->
     </div>
-
-
-
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/common.min.css"/>
+    <link rel="stylesheet" href="css/header.min.css"/>
+    <link rel="stylesheet" href="css/menu.min.css"/>
+    <link rel="stylesheet" href="css/newTool.min.css"/>
+    <link rel="stylesheet" href="css/activity.min.css"/>
+    <link rel="stylesheet" href="css/item.min.css"/>
+    <link rel="stylesheet" href="css/belovedClient.min.css"/>
+    <link rel="stylesheet" href="css/letsTalk.min.css"/>
+    <link rel="stylesheet" href="css/footer.min.css"/>
+    <link rel="stylesheet" href="css/modal.min.css"/>
+    <link rel="stylesheet" href="css/form-1.min.css"/>
+    <link rel="stylesheet" href="css/form.min.css"/>
+    <script src="js/modal.min.js"></script>
+    <script src="js/form2.min.js"></script>
   </body>
 </html>

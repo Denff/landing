@@ -11,7 +11,7 @@ block styles
     //- +style('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css')
     //- +style('https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.css')
     //- +style('https://cdn.jsdelivr.net/npm/lightgallery/dist/css/lightgallery.min.css')
-    +style('css/common.min.css')        // базовые стили
+    +style('css/common.min.css')   
     //- +style('css/lightgallery.css')      // фотогаллерея
     +style('css/header.min.css')
     +style('css/menu.min.css')
@@ -35,11 +35,11 @@ block scripts
     //- +script('https://cdn.jsdelivr.net/npm/inputmask/dist/min/jquery.inputmask.bundle.min.js')
     //- +script('js/lightgallery.js')       // фотогаллерея
     +script('js/modal.min.js')
-    +script('js/form.min.js')
+    +script('js/form2.min.js')
     //- +script('js/form-validate.min.js')
     //- +script('js/form-serialize.min.js')
     //- +script('js/form-1.min.js')
-    +script('js/theme.min.js')          // кастомный файл
+    //- +script('js/theme.min.js')     
 
 block content
     +b.wrapper
@@ -50,7 +50,8 @@ block content
         include ../components/activity/activity
         include ../components/belovedClient/belovedClient
         include ../components/letsTalk/letsTalk
+        include ../components/form-1/form-1
     include ../components/footer/footer
     .overlay
         include ../components/modal/modal
-        include ../components/modal/modal-2
+        //- include ../components/modal/modal-2
